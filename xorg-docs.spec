@@ -31,7 +31,7 @@ X.org documentation in PostScript format.
 Dokumentacja X.org w formacie PostScript.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %{__aclocal}
