@@ -1,12 +1,12 @@
 Summary:	X.org documentation
 Summary(pl):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.0.1
-Release:	0.1
+Version:	1.1
+Release:	1
 License:	MIT
 Group:		Documentation
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/doc/%{name}-X11R7.0-%{version}.tar.bz2
-# Source0-md5:	ac0d76afa46ef5da9e1cf33558f4b303
+Source0:	http://xorg.freedesktop.org/releases/individual/doc/xorg-docs-%{version}.tar.bz2
+# Source0-md5:	1591c0540dc53ea751450b8b822b0e79
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -31,7 +31,7 @@ X.org documentation in PostScript format.
 Dokumentacja X.org w formacie PostScript.
 
 %prep
-%setup -q -n %{name}-X11R7.0-%{version}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__aclocal}
