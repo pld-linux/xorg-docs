@@ -1,16 +1,19 @@
 Summary:	X.org documentation
 Summary(pl):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/xorg-docs-%{version}.tar.bz2
-# Source0-md5:	f817c5df43817846c1b27bac83da74d7
+# Source0-md5:	792d41a7a9f2e652b2ede4538c4bdf14
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	xorg-util-util-macros >= 1.0.0
+# not really used yet
+#BuildRequires:	docbook-utils
+#BuildRequires:	xorg-sgml-doctools >= 1.1.1
+BuildRequires:	xorg-util-util-macros >= 1.1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
