@@ -1,5 +1,5 @@
 Summary:	X.org documentation
-Summary(pl):	Dokumentacja X.org
+Summary(pl.UTF-8):   Dokumentacja X.org
 Name:		xorg-docs
 Version:	1.3
 Release:	1
@@ -19,18 +19,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X.org documentation.
 
-%description -l pl
+%description -l pl.UTF-8
 Dokumentacja X.org.
 
 %package ps
 Summary:	X.org documentation in PostScript format
-Summary(pl):	Dokumentacja X.org w formacie PostScript
+Summary(pl.UTF-8):   Dokumentacja X.org w formacie PostScript
 Group:		Documentation
 
 %description ps
 X.org documentation in PostScript format.
 
-%description ps -l pl
+%description ps -l pl.UTF-8
 Dokumentacja X.org w formacie PostScript.
 
 %prep
