@@ -1,5 +1,5 @@
 Summary:	X.org documentation
-Summary(pl.UTF-8):   Dokumentacja X.org
+Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
 Version:	1.3
 Release:	1
@@ -24,7 +24,7 @@ Dokumentacja X.org.
 
 %package ps
 Summary:	X.org documentation in PostScript format
-Summary(pl.UTF-8):   Dokumentacja X.org w formacie PostScript
+Summary(pl.UTF-8):	Dokumentacja X.org w formacie PostScript
 Group:		Documentation
 
 %description ps
