@@ -1,12 +1,12 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.4
+Version:	1.4.99.901
 Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/xorg-docs-%{version}.tar.bz2
-# Source0-md5:	4f2005bdd430a98c262901383459009e
+# Source0-md5:	c0d818df7b9e6c6733ce93212b35b051
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
