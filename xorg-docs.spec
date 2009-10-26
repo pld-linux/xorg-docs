@@ -1,12 +1,12 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.4.99.901
+Version:	1.5
 Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/xorg-docs-%{version}.tar.bz2
-# Source0-md5:	c0d818df7b9e6c6733ce93212b35b051
+# Source0-md5:	359ac83ad27eecd5588914ba8715301d
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,6 +14,7 @@ BuildRequires:	automake
 #BuildRequires:	docbook-utils
 #BuildRequires:	xorg-sgml-doctools >= 1.1.1
 BuildRequires:	xorg-util-util-macros >= 1.1.2
+Obsoletes:	xorg-docs-ps
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,17 +22,6 @@ X.org documentation.
 
 %description -l pl.UTF-8
 Dokumentacja X.org.
-
-%package ps
-Summary:	X.org documentation in PostScript format
-Summary(pl.UTF-8):	Dokumentacja X.org w formacie PostScript
-Group:		Documentation
-
-%description ps
-X.org documentation in PostScript format.
-
-%description ps -l pl.UTF-8
-Dokumentacja X.org w formacie PostScript.
 
 %prep
 %setup -q
@@ -57,7 +47,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %{_mandir}/man7/*.7*
-
-%files ps
-%defattr(644,root,root,755)
-%doc ChangeLog README $RPM_BUILD_ROOT%{_datadir}/X11/doc/hardcopy/*
