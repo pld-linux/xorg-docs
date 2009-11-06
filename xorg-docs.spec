@@ -2,7 +2,7 @@ Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
 Version:	1.5
-Release:	2
+Release:	3
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
@@ -18,8 +18,6 @@ Obsoletes:	xorg-docs-ps
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_target_platform	%{_target}
-
 %description
 X.org documentation.
 
@@ -33,7 +31,9 @@ Dokumentacja X.org.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--host=%{_target} \
+	--build=%{_target}
 %{__make}
 
 %install
