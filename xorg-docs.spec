@@ -13,7 +13,7 @@ BuildRequires:	automake
 # not really used yet
 #BuildRequires:	docbook-utils
 #BuildRequires:	xorg-sgml-doctools >= 1.1.1
-BuildRequires:	xorg-util-util-macros >= 1.1.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	xorg-docs-ps
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,8 +32,8 @@ Dokumentacja X.org.
 %{__autoconf}
 %{__automake}
 %configure \
-	--host=%{_target} \
-	--build=%{_target}
+	--host=%{_host} \
+	--build=%{_host}
 %{__make}
 
 %install
