@@ -47,4 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%{_mandir}/man7/*.7*
+%{_mandir}/man7/Consortium.7*
+%{_mandir}/man7/Standards.7*
+%{_mandir}/man7/X.7*
+%{_mandir}/man7/XOrgFoundation.7*
+%{_mandir}/man7/XProjectTeam.7*
+%{_mandir}/man7/Xsecurity.7*
