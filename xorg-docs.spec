@@ -1,19 +1,18 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.5
-Release:	4
+Version:	1.6
+Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
-# Source0-md5:	359ac83ad27eecd5588914ba8715301d
+# Source0-md5:	86101433834b485ab243f235757d7079
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-# not really used yet
-#BuildRequires:	docbook-utils
-#BuildRequires:	xorg-sgml-doctools >= 1.1.1
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xmlto >= 0.0.20
+BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-util-util-macros >= 1.10
 Obsoletes:	xorg-docs-ps
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +32,8 @@ Dokumentacja X.org.
 %{__automake}
 %configure \
 	--host=%{_host} \
-	--build=%{_host}
+	--build=%{_host} \
+	--without-fop
 %{__make}
 
 %install
@@ -41,12 +41,16 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# package just HTML, omit txt and xml
+find $RPM_BUILD_ROOT%{_docdir} -name '*.txt' -o -name '*.xml' | xargs %{__rm}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc ChangeLog MAINTAINERS README
+%{_docdir}/xorg-docs
 %{_mandir}/man7/Consortium.7*
 %{_mandir}/man7/Standards.7*
 %{_mandir}/man7/X.7*
