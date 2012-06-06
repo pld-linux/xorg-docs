@@ -1,19 +1,19 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.6
+Version:	1.7
 Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
-# Source0-md5:	86101433834b485ab243f235757d7079
+# Source0-md5:	f9405a1692671d843725b90166370e00
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
-BuildRequires:	xmlto >= 0.0.20
-BuildRequires:	xorg-sgml-doctools >= 1.5
-BuildRequires:	xorg-util-util-macros >= 1.10
+BuildRequires:	xmlto >= 0.0.22
+BuildRequires:	xorg-sgml-doctools >= 1.8
+BuildRequires:	xorg-util-util-macros >= 1.12
 Obsoletes:	xorg-docs-ps
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
