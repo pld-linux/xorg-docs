@@ -1,4 +1,4 @@
-%ifarch x32
+%if %{_host_cpu} == "x32"
 %define	build_arch %{_target_platform}
 %else
 %define	build_arch %{_host}
