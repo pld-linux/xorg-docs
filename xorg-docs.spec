@@ -2,7 +2,7 @@ Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
 Version:	1.7.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
@@ -32,8 +32,6 @@ Dokumentacja X.org.
 %{__autoconf}
 %{__automake}
 %configure \
-	--host=%{_host} \
-	--build=%{_host} \
 	--without-fop
 %{__make}
 
