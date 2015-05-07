@@ -32,6 +32,13 @@ Dokumentacja X.org.
 %{__autoconf}
 %{__automake}
 %configure \
+%ifarch x32
+	--host=%{_target_platform} \
+	--build=%{_target_platform} \
+%else
+	--host=%{_host} \
+	--build=%{_host} \
+%endif
 	--without-fop
 %{__make}
 
