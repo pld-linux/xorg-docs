@@ -1,3 +1,9 @@
+%ifarch x32
+%define	build_arch %{_target_platform}
+%else
+%define	build_arch %{_host}
+%endif
+
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
@@ -32,13 +38,8 @@ Dokumentacja X.org.
 %{__autoconf}
 %{__automake}
 %configure \
-%ifarch x32
-	--host=%{_target_platform} \
-	--build=%{_target_platform} \
-%else
-	--host=%{_host} \
-	--build=%{_host} \
-%endif
+	--host=%{build_arch} \
+	--build=%{build_arch} \
 	--without-fop
 %{__make}
 
