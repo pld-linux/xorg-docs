@@ -1,12 +1,12 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.7
+Version:	1.7.1
 Release:	1
 License:	MIT
 Group:		Documentation
 Source0:	http://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
-# Source0-md5:	f9405a1692671d843725b90166370e00
+# Source0-md5:	ce5a04d87b330b9091576b3410dc26d3
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
