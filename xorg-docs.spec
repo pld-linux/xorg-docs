@@ -7,19 +7,21 @@
 Summary:	X.org documentation
 Summary(pl.UTF-8):	Dokumentacja X.org
 Name:		xorg-docs
-Version:	1.7.2
+Version:	1.7.3
 Release:	1
 License:	MIT
 Group:		Documentation
-Source0:	https://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.bz2
-# Source0-md5:	1d4afe8ea9754f257048f3e898d9cab9
+Source0:	https://xorg.freedesktop.org/releases/individual/doc/%{name}-%{version}.tar.xz
+# Source0-md5:	47399839f7f6cfb0c50610bad14eb4a9
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-sgml-doctools >= 1.8
-BuildRequires:	xorg-util-util-macros >= 1.12
+BuildRequires:	xorg-util-util-macros >= 1.20
+BuildRequires:	xz
 Obsoletes:	xorg-docs-ps < 1.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
